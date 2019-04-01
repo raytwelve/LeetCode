@@ -1,0 +1,2 @@
+#ignore .DS_Store in repo's dir and sub-dirs
+**/.DS_Store
