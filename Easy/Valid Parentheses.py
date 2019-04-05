@@ -14,7 +14,7 @@ class Solution:
         if s == None or len(s) % 2 == 1: return False
         if len(s) == 0: return True
         
-        stack = []
+        stack = list()
         compliments = {')':'(', ']': '[', '}':'{'}
         for i in range(len(s)):
             curr = s[i]
