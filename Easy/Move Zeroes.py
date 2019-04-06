@@ -30,3 +30,4 @@ class Solution:
 	def moveZeroes(self, nums: List[int]) -> None:
 		self.solution1(nums)
 		self.solution2(nums)
+
