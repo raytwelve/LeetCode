@@ -10,17 +10,17 @@ Note that an empty string is also considered valid.
 '''
 
 class Solution:
-    def isValid(self, s: str) -> bool:
-        if s == None or len(s) % 2 == 1: return False
-        if len(s) == 0: return True
-        
-        stack = list()
-        compliments = {')':'(', ']': '[', '}':'{'}
-        for i in range(len(s)):
-            curr = s[i]
-            if curr in compliments.values():
-                stack.append(curr)
-            else:
-                if len(stack) == 0 or stack[-1] != compliments[curr]: return False
-                stack.pop()
-        return len(stack) == 0
+	def isValid(self, s: str) -> bool:
+		if s == None or len(s) % 2 == 1: return False
+		if len(s) == 0: return True
+		
+		stack = list()
+		compliments = {')':'(', ']': '[', '}':'{'}
+		for i in range(len(s)):
+			curr = s[i]
+			if curr in compliments.values():
+				stack.append(curr)
+			else:
+				if len(stack) == 0 or stack[-1] != compliments[curr]: return False
+				stack.pop()
+		return len(stack) == 0

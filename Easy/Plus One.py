@@ -8,13 +8,13 @@ You may assume the integer does not contain any leading zero, except the number 
 '''
 
 class Solution:
-    def plusOne(self, digits: List[int]) -> List[int]:
-        num = None
-        carry = 1
-        for i in range(-1, -len(digits)-1, -1):
-            num = digits[i] + carry
-            carry = num // 10
-            digits[i] = num % 10
-        if carry == 1:
-            digits.insert(0, carry)
-        return digits
+	def plusOne(self, digits: List[int]) -> List[int]:
+		num = None
+		carry = 1
+		for i in range(-1, -len(digits)-1, -1):
+			num = digits[i] + carry
+			carry = num // 10
+			digits[i] = num % 10
+		if carry == 1:
+			digits.insert(0, carry)
+		return digits

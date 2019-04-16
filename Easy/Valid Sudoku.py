@@ -19,23 +19,23 @@ each element would be a single character
 '''
 
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
-        length = len(board)
-        for i in range(length):
-            digits = list("".join(board[i]).replace('.', ''))
-            if len(digits) > len(set(digits)):
-                return False
-            col = [row[i] for row in board]
-            digits = list("".join(col).replace('.', ''))
-            if len(digits) > len(set(digits)):
-                return False
-            tlcr = (i//3) * 3
-            tlcc = i % 3 * 3
-            sq = list()
-            for j in range(tlcr, tlcr+3):
-                for k in range(tlcc, tlcc+3):
-                    sq.append(board[j][k])
-            digits = list("".join(sq).replace('.', ''))
-            if len(digits) > len(set(digits)):
-                return False
-        return True
+	def isValidSudoku(self, board: List[List[str]]) -> bool:
+		length = len(board)
+		for i in range(length):
+			digits = list("".join(board[i]).replace('.', ''))
+			if len(digits) > len(set(digits)):
+				return False
+			col = [row[i] for row in board]
+			digits = list("".join(col).replace('.', ''))
+			if len(digits) > len(set(digits)):
+				return False
+			tlcr = (i//3) * 3
+			tlcc = i % 3 * 3
+			sq = list()
+			for j in range(tlcr, tlcr+3):
+				for k in range(tlcc, tlcc+3):
+					sq.append(board[j][k])
+			digits = list("".join(sq).replace('.', ''))
+			if len(digits) > len(set(digits)):
+				return False
+		return True

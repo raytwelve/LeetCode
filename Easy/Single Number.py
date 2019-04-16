@@ -7,10 +7,10 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
 '''
 
 class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        nums.sort()
-        lastindex = len(nums)-1
-        for i in range(0, lastindex, 2):
-            if nums[i] != nums[i+1]:
-                return nums[i]
-        return nums[lastindex]
+	def singleNumber(self, nums: List[int]) -> int:
+		nums.sort()
+		lastindex = len(nums)-1
+		for i in range(0, lastindex, 2):
+			if nums[i] != nums[i+1]:
+				return nums[i]
+		return nums[lastindex]

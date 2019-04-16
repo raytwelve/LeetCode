@@ -5,8 +5,8 @@ Your algorithm should run in linear runtime complexity. Could you implement it u
 '''
 
 class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
-        full_range = set(range(len(nums)+1))
-        for n in nums:
-            full_range.discard(n)
-        return full_range.pop()
+	def missingNumber(self, nums: List[int]) -> int:
+		full_range = set(range(len(nums)+1))
+		for n in nums:
+			full_range.discard(n)
+		return full_range.pop()

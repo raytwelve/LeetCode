@@ -12,10 +12,10 @@ What if elements of nums2 are stored on disk, and the memory is limited such tha
 '''
 
 class Solution:
-    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        common = set(nums1).intersection(set(nums2))
-        result = list()
-        for num in common:
-            freq = min(nums1.count(num), nums2.count(num))
-            result.extend([num]*freq)
-        return result
+	def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+		common = set(nums1).intersection(set(nums2))
+		result = list()
+		for num in common:
+			freq = min(nums1.count(num), nums2.count(num))
+			result.extend([num]*freq)
+		return result

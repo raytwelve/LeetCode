@@ -6,5 +6,5 @@ Your function should return true if any value appears at least twice in the arra
 '''
 
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        return len(nums) != len(set(nums))
+	def containsDuplicate(self, nums: List[int]) -> bool:
+		return len(nums) != len(set(nums))

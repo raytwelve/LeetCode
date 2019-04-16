@@ -8,14 +8,14 @@ Note:
 '''
 
 class Solution:
-    def rotate(self, nums: List[int], k: int) -> None:
-        if k % len(nums) == 0:
-            return
-        
-        br = len(nums)-k % len(nums)
-        
-        st = nums[br:]
-        en = nums[:br]
-        nums.clear()
-        nums.extend(st)
-        nums.extend(en)
+	def rotate(self, nums: List[int], k: int) -> None:
+		if k % len(nums) == 0:
+			return
+		
+		br = len(nums)-k % len(nums)
+		
+		st = nums[br:]
+		en = nums[:br]
+		nums.clear()
+		nums.extend(st)
+		nums.extend(en)

@@ -37,17 +37,17 @@ j=2
 
 
 class Solution:
-    def rotate(self, board: List[List[int]]) -> None:
-        length = len(board)
-        last = length-1
-        for i in range((length+1)//2):
-            for j in range(i, last-i):
-                tmp = board[i][j]
-                # blc -> tlc
-                board[i][j] = board[last-j][i]
-                # brc -> blc
-                board[last-j][i] = board[last-i][last-j]
-                # trc -> brc
-                board[last-i][last-j] = board[j][last-i]
-                # tlc -> trc
-                board[j][last-i] = tmp
+	def rotate(self, board: List[List[int]]) -> None:
+		length = len(board)
+		last = length-1
+		for i in range((length+1)//2):
+			for j in range(i, last-i):
+				tmp = board[i][j]
+				# blc -> tlc
+				board[i][j] = board[last-j][i]
+				# brc -> blc
+				board[last-j][i] = board[last-i][last-j]
+				# trc -> brc
+				board[last-i][last-j] = board[j][last-i]
+				# tlc -> trc
+				board[j][last-i] = tmp

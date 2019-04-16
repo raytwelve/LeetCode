@@ -11,15 +11,15 @@ https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/tree
 
 # Definition for a binary tree node.
 # class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+#	 def __init__(self, x):
+#		 self.val = x
+#		 self.left = None
+#		 self.right = None
 
 class Solution:
-    def isValidBST(self, root: TreeNode) -> bool:
-        if root == None:
-            return True
-        
-        return (root.left == None or root.val >= root.left.val) and (root.right == None or root.val <= root.right.val) and self.isValidBST(root.left) and self.isValidBST(root.right)
-        
+	def isValidBST(self, root: TreeNode) -> bool:
+		if root == None:
+			return True
+		
+		return (root.left == None or root.val >= root.left.val) and (root.right == None or root.val <= root.right.val) and self.isValidBST(root.left) and self.isValidBST(root.right)
+		
