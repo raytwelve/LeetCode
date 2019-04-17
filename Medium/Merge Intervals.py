@@ -18,19 +18,15 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 class Solution:
 	def merge(self, intervals: List[List[int]]) -> List[List[int]]:
 		sintervals = sorted(intervals)
-		hasMerge = True
-		
-		while hasMerge:
-			hasMerge = False
-			i = 0
-			while i < len(sintervals)-1:
-				curr = sintervals[i]
-				nxt = sintervals[i+1]
-				if curr[1] >= nxt[0]:
-					hasMerge = True
-					sintervals[i][0] = min(curr[0], nxt[0])
-					sintervals[i][1] = max(curr[1], nxt[1])
-					sintervals.pop(i+1)
-				else:
-					i +=1
+
+		i = 0
+		while i < len(sintervals)-1:
+			curr = sintervals[i]
+			nxt = sintervals[i+1]
+			if curr[1] >= nxt[0]:
+				sintervals[i][0] = curr[0]
+				sintervals[i][1] = max(curr[1], nxt[1])
+				sintervals.pop(i+1)
+			else:
+				i +=1
 		return sintervals
