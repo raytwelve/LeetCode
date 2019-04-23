@@ -11,22 +11,22 @@ Your solution should be in logarithmic complexity.
 
 
 class Solution:
-    def findPeakElement(self, nums: List[int]) -> int:
-        if not nums or len(nums) == 0: return None
-        negativeInfinity = -sys.maxsize-1
-        nums.insert(0, negativeInfinity)
-        nums.append(negativeInfinity)
-        
-        i = 1
-        while i < len(nums)-1:
-            before = nums[i-1]
-            after = nums[i+1]
-            if nums[i] > before and nums[i] > after:
-                return i-1
-            
-            before = nums[-i-2] #-i-1-1
-            after = nums[-i] #-i-1+1
-            if nums[-i-1] > before and nums[-i-1] > after:
-                return len(nums)-2-i # we added 2 items to length
-            i += 1
-        return None
+	def findPeakElement(self, nums: List[int]) -> int:
+		if not nums or len(nums) == 0: return None
+		negativeInfinity = -sys.maxsize-1
+		nums.insert(0, negativeInfinity)
+		nums.append(negativeInfinity)
+		
+		i = 1
+		while i < len(nums)-1:
+			before = nums[i-1]
+			after = nums[i+1]
+			if nums[i] > before and nums[i] > after:
+				return i-1
+			
+			before = nums[-i-2] #-i-1-1
+			after = nums[-i] #-i-1+1
+			if nums[-i-1] > before and nums[-i-1] > after:
+				return len(nums)-2-i # we added 2 items to length
+			i += 1
+		return None
