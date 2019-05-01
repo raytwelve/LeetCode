@@ -46,3 +46,23 @@ class Solution:
 				nodes.append(flevel[-1].left)
 				nodes.append(flevel[-1].right)
 		return root
+
+
+# constant extra space
+class Solution:
+    def connect(self, root: 'Node') -> 'Node':
+        if not root: return None
+        level = 0
+        node = root
+        while node.left:
+            levelstart = node
+            node.left.next = node.right
+            node.right.next = node.next if not node.next else node.next.left
+            if node.next == None:
+                level += 1
+                node = root
+                for i in range(level):
+                    node = node.left
+            else:
+                node = node.next
+        return root
