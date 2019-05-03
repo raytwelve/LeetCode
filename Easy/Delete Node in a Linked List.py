@@ -17,11 +17,6 @@ Do not return anything from your function.
 #         self.next = None
 
 class Solution:
-    def deleteNode(self, node):
-        before = None
-        while node.next:
-            before = node
-            nxtval = node.next.val
-            node.val = nxtval
-            node = node.next
-        before.next = None
+	def deleteNode(self, node):
+		node.val = node.next.val
+		node.next = node.next.next
