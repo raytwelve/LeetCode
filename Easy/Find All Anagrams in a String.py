@@ -28,12 +28,9 @@ class Solution:
 		return count
 	
 	def updateDict(self, add, remove, count):
-		if add in count.keys(): 
-			count[add] += 1
-		else: 
-			count[add] = 1
-		if remove in count.keys():
-			count[remove] -= 1
+		if add in count.keys(): count[add] += 1
+		else: count[add] = 1
+		count[remove] -= 1
 			
 	def compareDicts(self, p, s):
 		for k,v in p.items():
