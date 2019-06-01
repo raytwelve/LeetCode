@@ -15,7 +15,6 @@ class Solution:
 		ops = ['+', '-', '*', '/']
 		for i in range(len(tokens)):
 			item = tokens[i]
-			# print((item, stack))
 			if item in ops:
 				stack.append(self.operate(item, stack))
 			else:
