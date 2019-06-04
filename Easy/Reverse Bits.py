@@ -19,4 +19,19 @@ class Solution:
 		binary = bin(n)[2:]
 		reverse = binary[::-1]
 		zeropads = '0' * (bits - len(binary))
-		return int(reverse + zeropads, 2) 
+		return int(reverse + zeropads, 2)
+
+# bit shift practice
+class Solution:
+	# @param n, an integer
+	# @return an integer
+	def reverseBits(self, n):
+		bits = 32
+		binary = bin(n)[2:]
+		binary = '0'*bits + binary
+		results = 0
+		for i in range(bits):
+			bit = int(binary[-1-i])
+			shift = bits-1-i
+			results |= bit << shift
+		return results
